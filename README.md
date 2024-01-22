@@ -39,7 +39,7 @@ _
 - *Project Demo and Presentation:*
 
 [Demo Link](https://whale-finance.vercel.app/)
-[Presentation Link]()
+[Presentation Link](https://www.canva.com/design/DAF6kaUmKfg/bASuzaVNbmwrKIxMYavbBg/edit?utm_content=DAF6kaUmKfg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
 - *Technical Architecture:*
 
