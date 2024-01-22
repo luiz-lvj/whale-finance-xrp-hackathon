@@ -144,11 +144,7 @@ export default function FundManager({ account, provider, signer} : { account: st
                 return;
             }
             let tokenAddress = WhaleTokenAddress;
-                if(context.chain == 253253){
-                tokenAddress = WhaleTokenAddressWhaleChain
-            } else if(context.chain == 595){
-                tokenAddress = WhaleTokenAddressMandala
-            }
+
 
             console.log("address", tokenAddress)
 
@@ -307,11 +303,6 @@ export default function FundManager({ account, provider, signer} : { account: st
                 }
                 
                 let tokenAddress = WhaleTokenAddressWhaleChain;
-                if(context.chain == 253253){
-                    tokenAddress = WhaleTokenAddressWhaleChain
-                } else if(context.chain == 595){
-                    tokenAddress = WhaleTokenAddressMandala
-                }
                 const whaleTokenContract = new ethers.Contract(tokenAddress,MultiChainTokenAbi, signer);
 
                 const txBurn = await whaleTokenContract.functions.debitFromChain(context.chain, ethers.utils.parseEther(String(amountBridge)));
@@ -342,12 +333,7 @@ export default function FundManager({ account, provider, signer} : { account: st
         } else if(msgBridge == "Redeem Tokens"){
             try{
                 setLoading(true);
-                let tokenAddress = "";
-                if(chainB == "Whale Chain Testnet"){
-                    tokenAddress = WhaleTokenAddressWhaleChain
-                } else if(chainB == "Mandala Testnet"){
-                    tokenAddress = WhaleTokenAddressMandala
-                }
+                let tokenAddress = WhaleTokenAddress;
                 const whaleTokenContract = new ethers.Contract(tokenAddress,MultiChainTokenAbi, signer);
 
                 const txMint = await whaleTokenContract.functions.credit(context.chain, account, ethers.utils.parseEther(String(amountBridge)));

@@ -2,6 +2,7 @@ export const networks: { [key: string]: number } = {
     'Whale Chain Testnet': 253253,
     'Mandala Testnet': 595,
     'Moonbase Alpha Testnet': 1287,
+    'XRP EVM SideChain Testnet': 1440002
     // 'Arbitrum': 42161,
     // 'Optimism': 10,
     // 'Avalanche': 43114,
