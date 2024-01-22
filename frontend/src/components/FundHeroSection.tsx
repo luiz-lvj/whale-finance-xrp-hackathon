@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ImgAvar from "../assets/whale_avatar2.png";
 import blockies from 'ethereum-blockies-base64';
-import AvatarDefault from "../assets/whale_avatar1.png";
 import { Link2 } from 'lucide-react';
 import {
     Tooltip,
@@ -12,12 +11,6 @@ import {
 
 // need to fix the image address
 
-type FundData = {
-    id: number;
-    name: string;
-    description: string;
-    avatar: string;
-};
 
 type HeroSectionProps = {
     name?: string;

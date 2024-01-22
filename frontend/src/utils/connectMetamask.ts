@@ -1,6 +1,4 @@
-import { ChainContext } from "@/contexts/ChainContext";
 import { ethers } from "ethers";
-import { useContext } from "react";
 import { networks } from "./chains";
 import { toast } from "@/components/ui/use-toast";
 
@@ -16,7 +14,7 @@ export async function connectMetamask(setChain?: (chain: number) => void){
               if(!(network.chainId in networks)){
                 toast({
                   title: "Network not supported",
-                  description: "Please switch to WhaleChain Testnet",
+                  description: "Please switch to XRP EVM Testnet",
                 })
               }
             }).catch((err) => {
@@ -54,7 +52,7 @@ export function getMetamaskProvider(setChain?: (chain: number) => void){
               if(!(network.chainId in networks)){
                 toast({
                   title: "Network not supported",
-                  description: "Please switch to WhaleChain Testnet",
+                  description: "Please switch to XRP EVM Testnet",
                 })
               }
             }).catch((err) => {

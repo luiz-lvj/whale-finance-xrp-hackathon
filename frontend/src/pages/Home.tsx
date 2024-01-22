@@ -1,4 +1,4 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
     NavigationMenu,
     NavigationMenuContent,
@@ -16,7 +16,7 @@ import {
 // } from "@/components/ui/carousel"
 import HeroSection from "@/components/HeroSection";
 import ImgBkg from "../assets/whale_ocean2.png";
-import { Label } from "@/components/ui/label";
+
 import { useNavigate } from "react-router-dom";
 
 const items = [

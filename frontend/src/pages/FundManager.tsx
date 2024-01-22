@@ -2,7 +2,6 @@ import {
     Card,
     CardContent,
     CardDescription,
-    CardFooter,
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
@@ -47,18 +46,16 @@ import { useNavigate, useParams } from "react-router-dom";
 import { Label } from "@radix-ui/react-label";
 import { ReloadIcon } from "@radix-ui/react-icons"
 import FundHeroSection from "@/components/FundHeroSection";
-import { SwapRouter, WhaleFinanceAddress, WhaleTokenAddress, WhaleTokenAddressMandala, WhaleTokenAddressWhaleChain, allowedTokens } from "../utils/addresses";
+import { SwapRouter, WhaleFinanceAddress, WhaleTokenAddress, allowedTokens } from "../utils/addresses";
 import { QuotaTokenAbi } from "../contracts/QuotaToken";
 import { WhaleFinanceAbi } from "../contracts/WhaleFinance";
 import { SafeAccountAbi } from "../contracts/SafeAccount";
-import { Trade } from "@uniswap/sdk";
 import { ArrowDownUp, ArrowRightLeft } from 'lucide-react';
 import { ethers } from "ethers"
 import { networks } from "@/utils/chains"
 import { MultiChainTokenAbi } from "@/contracts/MultichainToken"
 import { ChainContext } from "@/contexts/ChainContext"
 import { switchNetwork } from "@/utils/connectMetamask"
-import { ChartTestComponent } from "@/components/ChartTest"
 
 type FundData = {
     id: number;
@@ -81,7 +78,7 @@ export default function FundManager({ account, provider, signer} : { account: st
 
     const [fund, setFund] = useState<FundData | null>(null);
 
-    const [tokenA, setTokenA] = useState("DOT");
+    const [tokenA, setTokenA] = useState("WXRP");
     const [tokenABalance, setTokenABalance] = useState(0);
     const [tokenB, setTokenB] = useState("WBTC");
     const [tokenBBalance, setTokenBBalance] = useState(0);
@@ -90,15 +87,15 @@ export default function FundManager({ account, provider, signer} : { account: st
     const [amountBridge, setAmountBridge] = useState(0);
 
     const [fundManager, setFundManager] = useState("0x0");
-
     
 
     const [amountSwap, setAmountSwap] = useState(0);
-    const [msgSwap, setMsgSwap] = useState("Approve");
+    // const [msgSwap, setMsgSwap] = useState("Approve");
+    const msgSwap = "Approve";
     const [msgBridge, setMsgBridge] = useState("Bridge")
 
     const [chainA, setchainA] = useState("Whale Chain Testnet");
-    const [chainB, setchainB] = useState("Mandala Testnet");
+    const [chainB, setchainB] = useState("XRP EVM SideChain Testnet");
 
     const [loading, setLoading] = useState<boolean>(false);
 
@@ -302,7 +299,7 @@ export default function FundManager({ account, provider, signer} : { account: st
                     return;
                 }
                 
-                let tokenAddress = WhaleTokenAddressWhaleChain;
+                let tokenAddress = WhaleTokenAddress;
                 const whaleTokenContract = new ethers.Contract(tokenAddress,MultiChainTokenAbi, signer);
 
                 const txBurn = await whaleTokenContract.functions.debitFromChain(context.chain, ethers.utils.parseEther(String(amountBridge)));
@@ -353,7 +350,7 @@ export default function FundManager({ account, provider, signer} : { account: st
 
     return (
         <div className='w-[100vw] h-[100vh] overflow-y-auto'>
-            <FundHeroSection name={fund?.name} description={fund?.description} color="secondary"/>
+            <FundHeroSection name={fund?.name} description={fund?.description} color="secondary" manager={fundManager}/>
             <div className="px-12 pb-12">
                 <Tabs defaultValue="swap" className="w-full">
                     <TabsList className="mb-8 grid-cols-2">

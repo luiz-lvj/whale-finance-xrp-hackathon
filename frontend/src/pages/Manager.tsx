@@ -11,7 +11,6 @@ import { AiOutlineArrowUp, AiOutlineArrowDown } from "react-icons/ai";
 import { ethers } from 'ethers';
 import { WhaleFinanceAbi } from '../contracts/WhaleFinance';
 import { WhaleFinanceAddress } from '../utils/addresses';
-import { Label } from "@radix-ui/react-label";
 
 type FundData = {
     id: number;
