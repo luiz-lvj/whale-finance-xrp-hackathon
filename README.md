@@ -38,7 +38,9 @@ _
 
 - *Project Demo and Presentation:*
 
-[Demo Link](https://whale-finance.vercel.app/)
+[Demo Link](https://whale-finance-xrpl.vercel.app/)
+
+[Demo Video](https://youtu.be/DKN8tXYl858)
 
 [Presentation Link](https://www.canva.com/design/DAF6kaUmKfg/bASuzaVNbmwrKIxMYavbBg/edit?utm_content=DAF6kaUmKfg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
