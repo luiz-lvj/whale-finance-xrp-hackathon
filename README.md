@@ -159,7 +159,7 @@ _
  - [Github](https://github.com/BryanBorck)
  - Email: bryanborck@gmail.com
 
-*Luiz Vasconcelos *
+*Luiz Vasconcelos*
 
  - Blockchain developer in Whale Finance
  - Computer Engineering student at ITA (Brazil), PBA student cohort HK 2024, 1 year experience in blockchain development in a leadership area of innovation (brazilian startup), 2 years experience in Equity Research and involved (as participant and winner) in many web3 hackathons
