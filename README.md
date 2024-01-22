@@ -91,13 +91,20 @@ _
 
 ### Tokens Addresses
 
-  - WhaleChain:
-    -  WHALE Token address: 
-    -  WhaleFinance address:
-    -  QuotaToken address: 
-    -  SafeAccount address:
-    -  Beacon address: 
-    -  Registry address: 
+  - Fork Uniwap:
+     - UniswapV2Factory deployed at address: 0x9C080703256BDF9Ea1b485aE72f13E31f74C558b
+     - Deployed WETH at address: 0x0120aD0f0a676877fA36295c763eCB092a5a1E37
+     - Deployed UniswapV2Router02 at address: 0xb0744daaf6E84855C3551CDfbCec5892A8892B86
+  - Whale Implementation:
+     - quotaTokenImplementation address: 0xbe01a08eF192Bb9a5DF8eD9CD9133481574247AD
+     - registry address: 0x07f0a0d79f7F0366c0050218C2Bd6121787cdf8e
+     - whaleToken address: 0x50914077B638196Eff4bCAB090b6d8e8f19b53eE
+     - safeAccount address: 0xc302e1CB32C01A3449866722Cf54e222528726ED
+     - beacon address: 0xBd1f6103ccfecDfCBf35e2D722a2bfa5E18a25FC
+     - whale Finance address: 0xcd055c8824Ef6E9306b1F707Ce2E327ae2145c5D
+  - Token Addresses:
+    -  WXRP address: 0x22599F1d29F97F66ECdAAfD03dc8bE60ac45575D
+    -  WBTC address: 0x9F0a79c5A1Fb5f7E2221Ddda85362f97FF847F66
 
 ## Attachment Information
 
